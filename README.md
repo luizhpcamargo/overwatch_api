@@ -1,25 +1,33 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Ruby 2.3.0
 
-Things you may want to cover:
+Rails 5.0.6
 
-* Ruby version
+All the tests in rspec
 
-* System dependencies
+`bundle install`
 
-* Configuration
+`/api/heroes`                         List all the heroes
 
-* Database creation
+  With the fields:
 
-* Database initialization
+    total: Total of heroes returned by the action
 
-* How to run the test suite
+    data: with the list with id, name, real_name, health, armour and shield
 
-* Services (job queues, cache servers, search engines, etc.)
+`/api/heroes/:id`                     Show the specific hero
 
-* Deployment instructions
+  With id, name, real_name_ health, armour and shield
 
-* ...
-# overwatch_api
+`/api/heroes/:hero_id/abilities`      List all the abilities of a hero
+
+  total: Total abilities number
+
+  data: abilities list with  id, name, description and is_ultimate
+
+`/api/abilities`                      The same as the list above but with all the heroes
+
+`/api/abilities/:id`                  Show the ability
+
+  With id, name, description and is_ultimate
