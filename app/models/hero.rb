@@ -1,11 +1,8 @@
 class Hero < ApplicationRecord
-  def self.collection_serialize(heroes = Hero.all)
-    {
-      total: heroes.size,
-      data: heroes.map do |hero|
-        hero.serialize
-      end
-    }
+  has_many :abilities
+
+  class << self
+    include ModelSerializer
   end
 
   def serialize

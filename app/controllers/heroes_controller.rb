@@ -1,6 +1,6 @@
 class HeroesController < ApplicationController
   def index
-    render json: Hero.collection_serialize
+    render json: Hero.collection_serialize(Hero.all)
   end
 
   def show
